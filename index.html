@@ -23,13 +23,26 @@
 var csv = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSmJoJtk8RbF1WwQ5RnjrB-sf2xpJuQVVybbAi5Cv3_gruNnTujXxRYUbvTGWToGDQIV49LeaIcAwck/pub?output=csv"
 
 
-var width = window.innerWidth,
-    height = window.innerHeight,
+var width,
+    height,
     centered,
     clicked_point;
 
+if ($(window).width() > 700){
+  width = 900;
+  height = 560;
+  console.log("hey!");
+}
+else{
+  width = 500;
+  height = 300;
+  console.log("no!");
+};
+
 var projection = d3.geoMercator()
-    .translate([width / 2.2, height / 2.5]);
+.scale(width / 2 / Math.PI)
+ //.scale(100)
+ .translate([width / 2, height / 2]);
 
 var plane_path = d3.geoPath()
         .projection(projection);
