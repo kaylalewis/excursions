@@ -1,0 +1,26 @@
+body {
+margin: 2%;
+  background-color: black;
+  color: #E4F3F2
+}
+
+
+path{
+  stroke: #35837C;
+  stroke-width: 0.25px;
+  fill: #193F3C;
+}
+
+h1{
+  font-weight: lighter;
+  margin-bottom: 20px
+}
+
+text {
+            stroke: none;
+            fill: #C1C1C1;
+            font-size: 12px;
+            font-family: "Helvetica Neue"}
+.map{
+  background-color: #080E17;
+}
